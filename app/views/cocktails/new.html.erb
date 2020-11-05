@@ -1,0 +1,9 @@
+<h1>Create a new Cocktail</h1>
+
+<%= simple_form_for [@dose, @cocktail] do |f| %>
+  <%= f.input :name %>
+  <%= f.button :submit, :class => "btn btn-primary" %>
+<% end %>
+
+<h1><%= @cocktail.name %></h1>
+<%= link_to "back", new_cocktail_path %>

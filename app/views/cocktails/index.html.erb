@@ -1,0 +1,18 @@
+<h1>Cocktails</h1>
+<p>Find me in app/views/cocktails/index.html.erb</p>
+
+<div class="container">
+  <div class="row">
+
+    <% @cocktails.each do |cocktail| %>    
+      <div class="col-xs-12 col-sm-6 col-lg-4 my-1">
+        <%= link_to cocktail_path(cocktail) do %>
+          <div class="card card-link" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
+              <h1><%= cocktail.name %></h1>              
+              <% end %>
+          </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>
