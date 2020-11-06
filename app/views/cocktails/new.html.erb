@@ -2,8 +2,9 @@
 
 <%= simple_form_for [@dose, @cocktail] do |f| %>
   <%= f.input :name %>
+  <%= f.input :photo, as: :file %> 
   <%= f.button :submit, :class => "btn btn-primary" %>
  <% end %> 
 
 <h1><%= @cocktail.name %></h1>
-<%= link_to "back", new_cocktail_path %>
+<%= link_to "◀ back", cocktails_path %>

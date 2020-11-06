@@ -1,6 +1,8 @@
-<h5>Cocktails#show</h5>
+<div class="container">
+  <h5>Cocktails#show</h5>
 <%= link_to 'Home', cocktails_path %>
 <%= link_to "Add new Dose", new_cocktail_dose_path(@cocktail) %>
+<%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
 
 <h1><%= @cocktail.name %></h1>
 <% @cocktail.doses.each do |dose| %>
@@ -13,3 +15,4 @@
       data: { confirm: "Are you sure?" }  %>
     </li>
   <% end %>
+</div>
