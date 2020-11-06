@@ -1,17 +1,26 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://blog.teabox.com/wp-content/uploads/2017/04/STRAWBERRY-SPRITZ_blog-Banner.jpg);">
+  <div class="container">
+    <h1>Feeling too sober<strong></strong>  <strong></strong>?</h1>
+    <p>Search no more.</p>
+    <p></p>
+    <%= link_to 'Get drunk now!', new_cocktail_path, class: 'btn btn-flat'%>
+  </div>
+</div>
+
+
 <div class="container">
   <h1>Cocktails</h1>
 
 <div class="btn"><%= link_to 'Create a cocktail', new_cocktail_path %></div>
 
 <div class="container">
-  <div class="row">
-
+  <div class="card-group">
     <% @cocktails.each do |cocktail| %>    
       <div class="col-xs-12 col-sm-6 col-lg-4 my-1">
         <%= link_to cocktail_path(cocktail) do %>
           <div class="card card-link" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
               <h1><%= cocktail.name %></h1>
-              <%= cl_image_tag("txgb0ylchgq674olohes",
+              <%= cl_image_tag(cocktail.photo.key,
               width: 400, height: 300, crop: :fill) %>              
               <% end %>
           </div>
@@ -21,3 +30,5 @@
   </div>
 </div>
 </div>
+
+
