@@ -1,5 +1,6 @@
 <h3>Add a new dose</h3>
 <%= link_to 'Home', cocktails_path %>
+<%#= link_to Add Dose, cocktail_doses_path %>
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>

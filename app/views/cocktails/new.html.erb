@@ -3,7 +3,7 @@
 <%= simple_form_for [@dose, @cocktail] do |f| %>
   <%= f.input :name %>
   <%= f.button :submit, :class => "btn btn-primary" %>
-<% end %>
+ <% end %> 
 
 <h1><%= @cocktail.name %></h1>
 <%= link_to "back", new_cocktail_path %>

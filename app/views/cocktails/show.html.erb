@@ -1,5 +1,7 @@
 <h5>Cocktails#show</h5>
 <%= link_to 'Home', cocktails_path %>
+<%= link_to "Add new Dose", new_cocktail_dose_path(@cocktail) %>
+
 <h1><%= @cocktail.name %></h1>
 <% @cocktail.doses.each do |dose| %>
     <li class="list-group-item">
