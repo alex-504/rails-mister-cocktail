@@ -1,28 +1,43 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://blog.teabox.com/wp-content/uploads/2017/04/STRAWBERRY-SPRITZ_blog-Banner.jpg);">
-  <div class="container">
-    <h1>Feeling too sober<strong></strong>  <strong></strong>?</h1>
-    <p>Search no more.</p>
-    <p></p>
-    <%= link_to 'Get drunk now!', new_cocktail_path, class: 'btn btn-flat'%>
-  </div>
-</div>
-
-<div class="container">
-  <h1 class="h1">Menu</h1>
-  <div class="container">
-    <div class="card-group">
-      <% @cocktails.each do |cocktail| %>    
-        <div class="col-xs-12 col-sm-6 col-lg-4 my-1">
-          <%= link_to cocktail_path(cocktail) do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(cocktail.photo.key,
-                width: 400, height: 300, crop: :fill) %>)">
-                <%= cocktail.name %>          
-            </div>
-          <% end %>
-        </div>
-      <% end %>
+<div class="container-fluid">
+  <div class="banner"
+    style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://blog.teabox.com/wp-content/uploads/2017/04/STRAWBERRY-SPRITZ_blog-Banner.jpg);">
+    <div class="container">
+      <h1>Feeling too sober<strong></strong> <strong></strong>?</h1>
+      <p>Search no more.</p>
+      <p></p>
+      <%= link_to 'Get drunk now!', new_cocktail_path, class: 'btn btn-flat'%>
     </div>
   </div>
+
+  <div class="container">
+    <h1>Menu</h1>
+    <div class="container">
+      <div class="card-group">
+        <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-sm-6 col-lg-4 my-1">
+          <%= link_to cocktail_path(cocktail) do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(cocktail.photo.key,
+                  width: 400, height: 300, crop: :fill) %>)">
+            <%= cocktail.name %>
+          </div>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-discord"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      Don't drink and drive <i class="fas fa-car"></i>
+    </div>
+  </div>
+
 </div>
-
-
